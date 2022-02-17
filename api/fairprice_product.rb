@@ -29,7 +29,23 @@ def fair_price_products_request(search_keyword, page = '0')
         per_page_response = product_collection['value']['collection']['pagination']['page_size']
         max_page_response = product_collection['value']['collection']['pagination']['total_pages']
 
-        products_result = products_response
+        if !products_response.nil? && !products_response.empty?
+          products_response = products_response.map do |product|
+            price = 0
+
+            if !product['storeSpecificData'].nil? && !product['storeSpecificData'].empty?
+              price = product['storeSpecificData'][0]['mrp'].to_f
+            end
+
+            {
+              images: product['images'],
+              name: product['name'],
+              price: price
+            }
+          end
+        end
+
+        products_result = products_response.sort_by { |product| product[:price] }
         page_result = page_response
         per_page_result = per_page_response
         max_page_result = max_page_response
