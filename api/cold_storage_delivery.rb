@@ -6,11 +6,7 @@ def cold_storage_delivery_request(postal_code)
   delivery_result = {}
 
   conn = request_base
-  response = conn.post('') do |req|
-    req.body = { postal_code: postal_code }.to_json
-  end
-  puts "response.status = #{response.status}"
-  puts "response.body = #{response.body}"
+  response = conn.post('post', postal_code: postal_code)
 
   if response.status == 200 && !response.body.nil? && !response.body.empty?
     response_body = JSON.parse(response.body)
@@ -23,7 +19,6 @@ end
 
 def request_base
   Faraday.new(
-    url: 'https://coldstorage.com.sg/checkout/cart/checkdelivery',
-    headers: { 'Content-Type': 'application/json' }
+    url: 'https://coldstorage.com.sg/checkout/cart/checkdelivery'
   )
 end

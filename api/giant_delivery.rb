@@ -6,11 +6,7 @@ def giant_delivery_request(postal_code)
   delivery_result = {}
 
   conn = request_base
-  response = conn.post('') do |req|
-    req.body = { 'is_process': '1', 'selection': 'normal', 'postal_code': postal_code }.to_json
-  end
-  puts "response.status = #{response.status}"
-  puts "response.body = #{response.body}"
+  response = conn.post('post', 'is_process': '1', 'selection': 'normal', 'postal_code': postal_code)
 
   if response.status == 200 && !response.body.nil? && !response.body.empty?
     response_body = JSON.parse(response.body)
@@ -23,7 +19,6 @@ end
 
 def request_base
   Faraday.new(
-    url: 'https://giant.sg/checkout/fulfilment/simpleselection',
-    headers: { 'Content-Type': 'application/json' }
+    url: 'https://giant.sg/checkout/fulfilment/simpleselection'
   )
 end
