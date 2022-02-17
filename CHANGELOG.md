@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/yeukfei02/singapore-grocery-api/compare/v0.1.1...v0.1.2) (2022-02-17)
+
+
+### Features
+
+* 🎸 add order_by query param ([26e9aaa](https://github.com/yeukfei02/singapore-grocery-api/commit/26e9aaaac801f5b2861793c178cc5244827d4555))
+* 🎸 update product api response ([04d7dad](https://github.com/yeukfei02/singapore-grocery-api/commit/04d7dad599cb1c3e55ce8939a94cfbc35ac5f9e8))
+
 ### 0.1.1 (2022-02-17)
 
 
