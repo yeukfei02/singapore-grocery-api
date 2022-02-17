@@ -15,8 +15,9 @@ def get_cold_storage_products(event:, context:)
     search_keyword = event['queryStringParameters']['search_keyword']
     page = event['queryStringParameters']['page']
     per_page = event['queryStringParameters']['per_page']
+    order_by = event['queryStringParameters']['order_by'] || 'asc'
 
-    products, page, per_page, max_page, query = cold_storage_products_request(search_keyword, page, per_page)
+    products, page, per_page, max_page, query = cold_storage_products_request(search_keyword, page, per_page, order_by)
 
     response = {
       statusCode: 200,
