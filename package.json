@@ -1,0 +1,24 @@
+{
+  "name": "singapore-grocery-api",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/yeukfei02/singapore-grocery-api.git",
+  "author": "Donald Wu <yeukfei02@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "git-cz": "^4.8.0",
+    "serverless": "^3.2.1",
+    "serverless-offline": "^8.4.0",
+    "serverless-ruby-layer": "^1.5.0",
+    "standard-version": "^9.3.2"
+  },
+  "scripts": {
+    "dev": "serverless offline start",
+    "deploy": "serverless deploy",
+    "package": "serverless package",
+    "dashboard": "serverless dashboard",
+    "remove": "serverless remove",
+    "commit": "git-cz",
+    "release": "standard-version"
+  }
+}
