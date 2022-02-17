@@ -21,7 +21,6 @@ provider:
   apiGateway:
     shouldStartNameWithService: true
     description: singapore grocery api prod
-  lambdaHashingVersion: 20201221
   architecture: arm64
   timeout: 30
 
