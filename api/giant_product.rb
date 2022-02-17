@@ -32,7 +32,20 @@ def giant_products_request(search_keyword, page = '0', per_page = '20')
     max_page_response = response_body['results'][0]['nbPages']
     query_response = response_body['results'][0]['query']
 
-    products_result = products_response
+    if !products_response.nil? && !products_response.empty?
+      products_response = products_response.map do |product|
+        images_list = []
+        images_list.push(product['image_url']) if !product['image_url'].nil? && !product['image_url'].empty?
+
+        {
+          images: images_list,
+          name: product['name'],
+          price: product['price'].to_f
+        }
+      end
+    end
+
+    products_result = products_response.sort_by { |product| product[:price] }
     page_result = page_response
     per_page_result = per_page_response
     max_page_result = max_page_response
