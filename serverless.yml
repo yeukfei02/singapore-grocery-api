@@ -1,0 +1,61 @@
+org: yeukfei05
+app: singapore-grocery-api
+service: singapore-grocery-api
+
+frameworkVersion: "3"
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: ruby2.7
+  stage: prod
+  region: ap-southeast-1
+  apiName: singapore-grocery-api-prod
+  tracing:
+    apiGateway: true
+    lambda: true
+  environment:
+    RUBY_ENV: production
+    # USER_AWS_ACCESS_KEY: ${param:USER_AWS_ACCESS_KEY}
+    # USER_AWS_SECRET_ACCESS_KEY: ${param:USER_AWS_SECRET_ACCESS_KEY}
+    # X_ALGOLIA_APPLICATION_ID: ${param:X_ALGOLIA_APPLICATION_ID}
+    # X_ALGOLIA_API_KEY: ${param:X_ALGOLIA_API_KEY}
+  apiGateway:
+    shouldStartNameWithService: true
+    description: singapore grocery api prod
+  lambdaHashingVersion: 20201221
+  architecture: arm64
+  timeout: 30
+
+functions:
+  get_fair_price_products:
+    handler: src/get_fair_price_products/handler.get_fair_price_products
+    events:
+      - http:
+          path: /fairprice/products
+          method: get
+          cors: true
+
+  get_giant_products:
+    handler: src/get_giant_products/handler.get_giant_products
+    events:
+      - http:
+          path: /giant/products
+          method: get
+          cors: true
+
+  get_cold_storage_products:
+    handler: src/get_cold_storage_products/handler.get_cold_storage_products
+    events:
+      - http:
+          path: /cold-storage/products
+          method: get
+          cors: true
+
+plugins:
+  - serverless-ruby-layer
+  - serverless-offline
+
+custom:
+  rubyLayer:
+    use_docker: true
