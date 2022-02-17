@@ -16,10 +16,8 @@ provider:
     lambda: true
   environment:
     RUBY_ENV: production
-    # USER_AWS_ACCESS_KEY: ${param:USER_AWS_ACCESS_KEY}
-    # USER_AWS_SECRET_ACCESS_KEY: ${param:USER_AWS_SECRET_ACCESS_KEY}
-    # X_ALGOLIA_APPLICATION_ID: ${param:X_ALGOLIA_APPLICATION_ID}
-    # X_ALGOLIA_API_KEY: ${param:X_ALGOLIA_API_KEY}
+    X_ALGOLIA_APPLICATION_ID: ${param:X_ALGOLIA_APPLICATION_ID}
+    X_ALGOLIA_API_KEY: ${param:X_ALGOLIA_API_KEY}
   apiGateway:
     shouldStartNameWithService: true
     description: singapore grocery api prod
