@@ -57,6 +57,30 @@ functions:
           method: get
           cors: true
 
+  get_fair_price_delivery:
+    handler: src/get_fair_price_delivery/handler.get_fair_price_delivery
+    events:
+      - http:
+          path: /fairprice/delivery
+          method: get
+          cors: true
+
+  get_giant_delivery:
+    handler: src/get_giant_delivery/handler.get_giant_delivery
+    events:
+      - http:
+          path: /giant/delivery
+          method: get
+          cors: true
+
+  get_cold_storage_delivery:
+    handler: src/get_cold_storage_delivery/handler.get_cold_storage_delivery
+    events:
+      - http:
+          path: /cold-storage/delivery
+          method: get
+          cors: true
+
 plugins:
   - serverless-ruby-layer
   - serverless-offline
