@@ -2,7 +2,7 @@
 
 require 'faraday'
 
-def fair_price_products_request(search_keyword, page = '0')
+def fair_price_products_request(search_keyword, page = '0', order_by = 'asc')
   products_result = []
   page_result = 0
   per_page_result = 20
@@ -45,7 +45,13 @@ def fair_price_products_request(search_keyword, page = '0')
           end
         end
 
-        products_result = products_response.sort_by { |product| product[:price] }
+        case order_by
+        when 'asc'
+          products_result = products_response.sort_by { |product| product[:price] }
+        when 'desc'
+          products_result = products_response.sort_by { |product| product[:price] }.reverse
+        end
+
         page_result = page_response
         per_page_result = per_page_response
         max_page_result = max_page_response
