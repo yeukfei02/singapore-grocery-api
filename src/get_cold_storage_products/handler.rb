@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
-require_relative '../../api/cold_storage'
+require_relative '../../api/cold_storage_product'
 
 def get_cold_storage_products(event:, context:)
   response = {

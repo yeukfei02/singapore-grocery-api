@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
-require_relative '../../api/fairprice'
+require_relative '../../api/fairprice_product'
 
 def get_fair_price_products(event:, context:)
   response = {

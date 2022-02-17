@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
-require_relative '../../api/giant'
+require_relative '../../api/giant_product'
 
 def get_giant_products(event:, context:)
   response = {
