@@ -38,6 +38,7 @@ $ yarn run remove
 
 // rubocop
 $ rubocop --auto-correct
+$ rubocop -A
 
 // reek
 $ reek
