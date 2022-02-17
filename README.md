@@ -2,9 +2,9 @@
 
 singapore-grocery-api
 
-documentation: <>
+documentation: <https://documenter.getpostman.com/view/3827865/UVkiSdi8>
 
-api url: <>
+api url: <https://5v2ysgp454.execute-api.ap-southeast-1.amazonaws.com/prod>
 
 ## Requirement
 
