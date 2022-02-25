@@ -40,7 +40,8 @@ def giant_products_request(search_keyword, page = '0', per_page = '20', order_by
         {
           images: images_list,
           name: product['name'],
-          price: product['price'].to_f
+          price: product['price'].to_f,
+          tag: 'giant'
         }
       end
     end

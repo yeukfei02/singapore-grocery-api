@@ -40,7 +40,8 @@ def fair_price_products_request(search_keyword, page = '0', order_by = 'asc')
             {
               images: product['images'],
               name: product['name'],
-              price: price
+              price: price,
+              tag: 'fairprice'
             }
           end
         end
