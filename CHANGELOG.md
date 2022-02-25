@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/yeukfei02/singapore-grocery-api/compare/v0.1.3...v0.1.4) (2022-02-25)
+
+
+### Bug Fixes
+
+* 🐛 fix cors problem ([4b1f9d2](https://github.com/yeukfei02/singapore-grocery-api/commit/4b1f9d2ed25ad1f69bddc472310670da71b39f49))
+
 ### [0.1.3](https://github.com/yeukfei02/singapore-grocery-api/compare/v0.1.2...v0.1.3) (2022-02-25)
 
 
