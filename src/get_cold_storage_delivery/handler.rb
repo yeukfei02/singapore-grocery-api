@@ -6,6 +6,10 @@ require_relative '../../api/cold_storage_delivery'
 def get_cold_storage_delivery(event:, context:)
   response = {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": '*',
+      "Access-Control-Allow-Credentials": true
+    },
     body: {
       message: 'get_cold_storage_delivery'
     }.to_json
@@ -18,6 +22,10 @@ def get_cold_storage_delivery(event:, context:)
 
     response = {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": '*',
+        "Access-Control-Allow-Credentials": true
+      },
       body: {
         message: 'get_cold_storage_delivery',
         delivery: delivery
@@ -26,6 +34,10 @@ def get_cold_storage_delivery(event:, context:)
   else
     response = {
       statusCode: 400,
+      headers: {
+        "Access-Control-Allow-Origin": '*',
+        "Access-Control-Allow-Credentials": true
+      },
       body: {
         message: 'get_cold_storage_delivery error, must have query params'
       }.to_json
