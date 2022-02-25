@@ -6,6 +6,10 @@ require_relative '../../api/giant_product'
 def get_giant_products(event:, context:)
   response = {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": '*',
+      "Access-Control-Allow-Credentials": true
+    },
     body: {
       message: 'get_giant_products'
     }.to_json
@@ -21,6 +25,10 @@ def get_giant_products(event:, context:)
 
     response = {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": '*',
+        "Access-Control-Allow-Credentials": true
+      },
       body: {
         message: 'get_giant_products',
         products: products,
@@ -33,6 +41,10 @@ def get_giant_products(event:, context:)
   else
     response = {
       statusCode: 400,
+      headers: {
+        "Access-Control-Allow-Origin": '*',
+        "Access-Control-Allow-Credentials": true
+      },
       body: {
         message: 'get_giant_products error, must have query params'
       }.to_json

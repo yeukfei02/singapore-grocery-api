@@ -6,6 +6,10 @@ require_relative '../../api/fairprice_product'
 def get_fair_price_products(event:, context:)
   response = {
     statusCode: 200,
+    headers: {
+      "Access-Control-Allow-Origin": '*',
+      "Access-Control-Allow-Credentials": true
+    },
     body: {
       message: 'get_fair_price_products'
     }.to_json
@@ -20,6 +24,10 @@ def get_fair_price_products(event:, context:)
 
     response = {
       statusCode: 200,
+      headers: {
+        "Access-Control-Allow-Origin": '*',
+        "Access-Control-Allow-Credentials": true
+      },
       body: {
         message: 'get_fair_price_products',
         products: products,
@@ -32,6 +40,10 @@ def get_fair_price_products(event:, context:)
   else
     response = {
       statusCode: 400,
+      headers: {
+        "Access-Control-Allow-Origin": '*',
+        "Access-Control-Allow-Credentials": true
+      },
       body: {
         message: 'get_fair_price_products error, must have query params'
       }.to_json
