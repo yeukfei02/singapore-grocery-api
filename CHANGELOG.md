@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/yeukfei02/singapore-grocery-api/compare/v0.1.2...v0.1.3) (2022-02-25)
+
+
+### Features
+
+* 🎸 add .github folder ([3c179ba](https://github.com/yeukfei02/singapore-grocery-api/commit/3c179bad86a96f08b35141e9755c57d8d30a71ab))
+* 🎸 add tag in response ([de1b08b](https://github.com/yeukfei02/singapore-grocery-api/commit/de1b08bb95f45571d42f312bc5ff59edf36e4323))
+
 ### [0.1.2](https://github.com/yeukfei02/singapore-grocery-api/compare/v0.1.1...v0.1.2) (2022-02-17)
 
 
