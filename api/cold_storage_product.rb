@@ -37,10 +37,14 @@ def cold_storage_products_request(search_keyword, page = '0', per_page = '20', o
         images_list = []
         images_list.push(product['image_url']) if !product['image_url'].nil? && !product['image_url'].empty?
 
+        offers_list = []
+        offers_list.push(product['promo_label']) if !product['promo_label'].nil? && !product['promo_label'].empty?
+
         {
           images: images_list,
           name: product['name'],
           price: product['price'].to_f,
+          offers: offers_list,
           tag: 'coldstorage'
         }
       end

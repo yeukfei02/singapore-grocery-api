@@ -32,15 +32,24 @@ def fair_price_products_request(search_keyword, page = '0', order_by = 'asc')
         if !products_response.nil? && !products_response.empty?
           products_response = products_response.map do |product|
             price = 0
+            offers = []
 
             if !product['storeSpecificData'].nil? && !product['storeSpecificData'].empty?
               price = product['storeSpecificData'][0]['mrp'].to_f
+            end
+
+            if !product['offers'].nil? && !product['offers'].empty?
+              offers = product['offers'].map do |offer|
+                description = offer['description']
+                description
+              end
             end
 
             {
               images: product['images'],
               name: product['name'],
               price: price,
+              offers: offers,
               tag: 'fairprice'
             }
           end
