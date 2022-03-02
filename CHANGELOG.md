@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/yeukfei02/singapore-grocery-api/compare/v0.1.4...v0.1.5) (2022-03-02)
+
+
+### Features
+
+* 🎸 add offers list in response ([89fac12](https://github.com/yeukfei02/singapore-grocery-api/commit/89fac127de20cc150698a5e6603090aea8152ec7))
+
 ### [0.1.4](https://github.com/yeukfei02/singapore-grocery-api/compare/v0.1.3...v0.1.4) (2022-02-25)
 
 
