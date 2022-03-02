@@ -7,8 +7,8 @@
   "license": "MIT",
   "devDependencies": {
     "git-cz": "^4.8.0",
-    "serverless": "^3.2.1",
-    "serverless-offline": "^8.4.0",
+    "serverless": "^3.7.0",
+    "serverless-offline": "^8.5.0",
     "serverless-ruby-layer": "^1.5.0",
     "standard-version": "^9.3.2"
   },
