@@ -12,7 +12,6 @@ def fair_price_products_request(search_keyword, page = '0', order_by = 'asc')
   conn = request_base
   response = conn.get('') do |req|
     req.params['q'] = search_keyword
-
     req.params['page'] = page.to_s if !page.nil? && !page.empty? && page.to_s != '0'
   end
 
@@ -50,6 +49,7 @@ def fair_price_products_request(search_keyword, page = '0', order_by = 'asc')
               name: product['name'],
               price: price,
               offers: offers,
+              slug: product['slug'],
               tag: 'fairprice'
             }
           end
