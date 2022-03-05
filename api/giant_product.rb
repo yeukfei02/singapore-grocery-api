@@ -45,6 +45,7 @@ def giant_products_request(search_keyword, page = '0', per_page = '20', order_by
           name: product['name'],
           price: product['price'].to_f,
           offers: offers_list,
+          slug: product['slug'],
           tag: 'giant'
         }
       end
