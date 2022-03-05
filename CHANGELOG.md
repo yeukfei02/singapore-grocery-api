@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/yeukfei02/singapore-grocery-api/compare/v0.1.5...v0.1.6) (2022-03-05)
+
+
+### Features
+
+* 🎸 add slug in response ([67b1dee](https://github.com/yeukfei02/singapore-grocery-api/commit/67b1deef8c7da734a9bcc3518e029d204ed3145b))
+
+
+### Bug Fixes
+
+* 🐛 update sls lib ([df80585](https://github.com/yeukfei02/singapore-grocery-api/commit/df80585a4e415d0ee6cd529fedf9f549c37e20d8))
+
 ### [0.1.5](https://github.com/yeukfei02/singapore-grocery-api/compare/v0.1.4...v0.1.5) (2022-03-02)
 
 
