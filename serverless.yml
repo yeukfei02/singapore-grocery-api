@@ -33,6 +33,14 @@ functions:
           method: get
           cors: true
 
+  get_suggestions:
+    handler: src/get_suggestions/handler.get_suggestions
+    events:
+      - http:
+          path: /get-suggestions
+          method: get
+          cors: true
+
   get_fair_price_products:
     handler: src/get_fair_price_products/handler.get_fair_price_products
     events:
