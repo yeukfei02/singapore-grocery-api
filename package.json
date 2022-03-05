@@ -1,6 +1,6 @@
 {
   "name": "singapore-grocery-api",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "main": "index.js",
   "repository": "https://github.com/yeukfei02/singapore-grocery-api.git",
   "author": "Donald Wu <yeukfei02@gmail.com>",
