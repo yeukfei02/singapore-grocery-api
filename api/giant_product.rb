@@ -33,6 +33,8 @@ def giant_products_request(search_keyword, page = '0', per_page = '20', order_by
     query_response = response_body['results'][0]['query']
 
     if !products_response.nil? && !products_response.empty?
+      current_time = Time.now.strftime('%Y-%m-%dT%H:%M:%S.%L%z')
+
       products_response = products_response.map do |product|
         images_list = []
         images_list.push(product['image_url']) if !product['image_url'].nil? && !product['image_url'].empty?
@@ -46,7 +48,10 @@ def giant_products_request(search_keyword, page = '0', per_page = '20', order_by
           price: product['price'].to_f,
           offers: offers_list,
           slug: product['slug'],
-          tag: 'giant'
+          tag: 'giant',
+          sku: product['sku'],
+          created_at: current_time,
+          updated_at: current_time
         }
       end
     end

@@ -50,7 +50,10 @@ def fair_price_products_request(search_keyword, page = '0', order_by = 'asc')
               price: price,
               offers: offers,
               slug: product['slug'],
-              tag: 'fairprice'
+              tag: 'fairprice',
+              sku: '',
+              created_at: product['createdAt'],
+              updated_at: product['storeSpecificData'][0]['updatedAt'] || ''
             }
           end
         end
